@@ -32,12 +32,6 @@ fly-personality-clean/
 │   ├── Colors.m / Console.m / Identity.m / Patches.m / Plot.m
 │   ├── fdr_bh.m             — Benjamini–Hochberg FDR correction
 │   ├── compare_correlation_coefficients.m
-│   ├── violinplot/          — Violin plot (bastibe/Violinplot-Matlab, MIT)
-│   │   ├── violinplot.m
-│   │   └── Violin.m
-│   └── ParTI/               — Pareto Task Inference (Hart et al. 2015)
-│       ├── ParTI_lite.m
-│       └── PCHA/PCHA1.m
 │
 ├── SupportFiles/
 │   ├── W.mat                — Pre-computed LDA projection matrix
@@ -124,3 +118,6 @@ Place all `.mat` files in the `Data/` folder before running the script.
 ## Reproducibility Notes
 
 - **LDA projection (W):** By default the script loads the pre-computed matrix `SupportFiles/W.mat` so all figures are exactly reproducible. To recompute from scratch, set `opt.computeAll = true` in `MainFlyIndividuality.m`. Minor numerical differences may appear due to random initialization in LDA.
+
+## External Dependencies
+The code uses two external packages: [violinplot](https://www.mathworks.com/matlabcentral/fileexchange/170126-violinplot-matlab) for generating violin plots and [ParTI](https://github.com/AlonLabWIS/ParTI) for computing archetypes.
