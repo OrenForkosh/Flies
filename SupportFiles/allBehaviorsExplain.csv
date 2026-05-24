@@ -1,0 +1,97 @@
+﻿table,bin,explain,type,short,text
+fly,2,number of individual fly,,,
+name_of_the_file,2,"""",,,
+movie_number,2,"""",,,
+sex,2,male \female,,,
+condition,2,"""",,,
+scores_Grooming,1,fly grooms,activity,Grooming,Groom
+scores_Jump,1,fly jumps,activity,Jump,Jump
+scores_Long_Distance_Approach,1,fly approaches from distance to another fly and perform interaction,social,Long Distance Approach,Long  Approach
+scores_Short_Distance_Approach,1,fly approaches from short (up to 1 body length) to another fly and perform interaction,social,Short Distance Approach,Short  Approach
+scores_Social_Clustering,1,fly sits together in a group of 3 or more flies,social,Social Clustering,Social Cluster
+scores_Long_Lasting_Interaction,1,interaction that takes more than 30 frames (?),social,Long Lasting Interaction,Long Interaction
+scores_Song,0,fly moves one wing next to another fly,social,Song,Song
+scores_Stop,1,fly is still,activity,Stop,Stop
+scores_Touch,1,fly actively touches another fly,social,Touch,Touch
+scores_Turn,1,changes in fly's direction,activity,Turn,Turn
+scores_Walk,1,fly moves.,activity,Walk,Walk
+absanglefrom1to2_nose2ell,1,Absolute difference between direction to closest animal based on dnose2ell and current animal’s orientation (rad),social,Orientation Diff To Closest Animal,Orientation Diff to Nearest Fly
+absdtheta,1,Angular speed (rad/s) |dtheta|. Transformations: relative,activity,Angular speed (rad/s) ,Angular Speed
+absphidiff_anglesub,1,Absolute difference in velocity direction between current animal and closest animal based on anglesub (rad),coordination,Relative radial velocity (anglesub),Relative Radial Velocity (anglesub)
+absphidiff_nose2ell,1,Absolute difference in velocity direction between current animal and closest animal based on dnose2ell (rad),coordination,Relative radial velocity (nose2ell),Relative Radial Velocity (nose2ell)
+absthetadiff_anglesub,1,: Absolute difference in orientation between current animal and closest animal based on anglesub (rad),coordination,Difference in orientation between two flies (anglesub),Diff in Orientation Between Two Flies (anglesub)
+absthetadiff_nose2ell,1,Absolute difference in orientation between this animal and closest animal based on dnose2ell (rad),coordination,Difference in orientation between two flies (nose2ell),Diff in Orientation Between Two Flies (nose2ell)
+anglefrom1to2_anglesub,1,Angle to closest (based on angle subtended) animal’s centroid in current animal’s coordinate system. Metric that encodes the position of the closest animal relative to the current animal.,coordination,Angle To Closest Animal,Angle to Nearest Fly
+anglefrom1to2_nose2ell,1,"Angle to closest (based on distance from nose to ellipse) animal’s centroid in current animal’s coordinate system. Metric that encodes the position of the closest animal relative to the current animal. Transformations: flip, abs.",coordination,Angle To Closest Animal (Dnose2Ell),Angle to Nearest Fly (dnose2ell)
+angleonclosestfly,1,"Angle of the current animal’s centroid in the closest (based on distance from nose to ellipse) animal’s coordinate system. Metric that encodes the position of the closest animal relative to the current animal. Transformations: flip, abs.",coordination,Angle Of Current Animal (Dnose2Ell),Fly's Angle (dnose2ell)
+anglesub,1,"Maximum total angle of animal’s field of view (fov) occluded by another animal (rad). The parameter fov that can be set, and for our classifier’s we set it to π radians.",social,Occluded Field Of View,Occluded Field of View
+closestfly_anglesub,1,"Identity of closest animal, based on anglesub, which is the total angle of animal’s field of view (for) occluded by the other animal (rad). The parameter fov that can be set, and for our classifier’s we set it to π radians..",identity,Neighbour Identity (Anglesub),Nearest Identity (anglesub)
+closestfly_center,1,"Identity of closest animal, based on dcenter.",identity,Neighbour Identity (Dcenter),Nearest Identity (dcenter)
+closestfly_ell2nose,1,"Identity of closest animal, based on dell2nose",identity,Neighbour Identity (Dell2Nose),Nearest Identity (dell2nose)
+closestfly_nose2ell,1,"Identity of closest animal, based on dnose2ell",identity,Neighbour Identity (Dnose2Ell),Nearest Identity (dnose2ell)
+closestfly_nose2tail,1,couldn’t found,identity,Neighbour Identity (Dnose2tail),Nearest Identity (dnose2tail)
+danglesub,1,"Change in maximum total angle of animal’s view occluded by another animal (rad/s). Transformations: none, abs.",social,Change In Occluded View,Change In Occluded View
+dcenter,1,"Minimum distance from this animal’s center to other animal’s center. Transformations: none, relative.",social,Min Distance To Center Between Flies,Min Dist to Center Between Flies
+ddcenter,1,"Change in minimum distance between this animal’s center and other flies’ centers (mm/s). Transformations: none, abs.",social,Change In Min Distance To Center Between Flies,Min  Dist to Center Between Flies Change
+dell2nose,1,"Minimum distance from any point of this animal’s ellipse to the nose of other flies. Transformations: none, relative.",social,Min Distance To Nose,Min Dist to Nose
+dnose2ell,1,"Minimum distance from any point of this animal’s nose to the ellipse of other flies. Transformations: none, relative.",social,Min Distance To Ellipsoide,Min Dist to Ellipsoide
+dnose2tail,1,"Minimum distance from any point of this animal’s nose to the tail of other flies. Transformations: none, relative.",social,Min Distance To Tail,Min Dist to Tail
+dphi,1,": Change in velocity direction (rad). Transformations: none, abs. • phi: Velocity direction (rad)",social,Change in velocity direction,Change in Velocity Orientation
+dtheta,1,"Angular velocity (rad/s). Transformations: flip, abs",activity,Angular velocity,Angular Velocity
+magveldiff_anglesub,1,"Magnitude of difference in velocity of this animal and velocity of closest animal based on anglesub (mm/s). Transformations: none, relative.",coordination,Velocity Diff (Anglesub),Velocity Diff (anglesub)
+magveldiff_nose2ell,1,Magnitude of difference in velocity of this animal and velocity of closest animal based on dnose2ell (mm/s),coordination,Velocity Diff (Dnose2Ell),Velocity Diff (dnose2ell)
+nflies_close,1,Number of flies within 2 body lengths (4a),social,Number of close flies,No. of Close Flies
+velmag,1,Speed of the center of rotation (mm/s).,activity,velocity,Velocity
+veltoward_anglesub,1,"Velocity of this animal in the direction towards the closest animal (closest animal being defined based on anglesub) (mm/s). Transformations: none, relative.",social,Veclocity towards a close fly (anglesub),Veclocity Towards a Close Fly (anglesub)
+veltoward_nose2ell,1,": Velocity of this animal in the direction towards the closest animal (closest animal being defined based on dnose2ell) (mm/s). Transformations: none, relative.",social,Veclocity towards a close fly (nose2ell),Veclocity Towards a Close Fly (nose2ell)
+scores_Socialclustering,1,fly sits together in a group of 3 or more flies,social,Social Clustering,Social Cluster
+a,0,,,,
+a_mm,0,,,,
+absdv_cor,0,,,,
+absyaw,0,,,,
+angle2wall,0,,,,
+area,0,,,,
+arena_angle,0,,,,
+arena_r,0,,,,
+b,0,,,,
+b_mm,0,,,,
+closestfly_nose2ell_angle_30tomin30,0,,,,
+closestfly_nose2ell_angle_min20to20,0,,,,
+closestfly_nose2ell_angle_min30to30,0,,,,
+corfrac_maj,0,,,,
+corfrac_min,0,,,,
+da,0,,,,
+dangle2wall,0,,,,
+darea,0,,,,
+db,0,,,,
+ddist2wall,0,,,,
+decc,0,,,,
+dist2wall,0,,,,
+dnose2ell_angle_30tomin30,0,,,,
+dnose2ell_angle_min20to20,0,,,,
+dnose2ell_angle_min30to30,0,,,,
+dt,0,,,,
+du_cor,0,,,,
+du_ctr,0,,,,
+du_tail,0,,,,
+dv_cor,0,,,,
+dv_ctr,0,,,,
+dv_tail,0,,,,
+ecc,0,,,,
+flipdv_cor,0,,,,
+phi,0,,,,
+phisideways,0,,,,
+signdtheta,0,,,,
+theta,0,,,,
+theta_mm,0,,,,
+timestamps,0,,,,
+velmag_ctr,0,,,,
+velmag_nose,0,,,,
+velmag_tail,0,,,,
+x,0,,,,
+x_mm,0,,,,
+xnose_mm,0,,,,
+y,0,,,,
+y_mm,0,,,,
+yaw,0,,,,
+ynose_mm,0,,,,

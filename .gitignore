@@ -1,0 +1,19 @@
+# Large data files — download from Zenodo (see README)
+Data/*.mat
+
+# Keep small support .mat files (W.mat = 4 KB)
+!SupportFiles/W.mat
+
+# MATLAB autosave / temp files
+*.asv
+*.m~
+*.mex*
+
+# Figure output (regenerate by running the script)
+Figs/
+
+# macOS metadata
+.DS_Store
+
+# MATLAB figure files (large binary)
+*.fig
