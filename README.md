@@ -1,7 +1,5 @@
 # Fly Personality — Reproducibility Code
 
-**Paper:** Forkosh et al. (2026). *Life Events Reshape Individuality in Flies Without Losing Consistency.* PLOS Biology.
-
 This repository contains the MATLAB code used to reproduce the figures and statistical analyses in the paper. Raw behavioral data are hosted separately (see [Data](#data) below).
 
 ---
@@ -126,26 +124,3 @@ Place all `.mat` files in the `Data/` folder before running the script.
 ## Reproducibility Notes
 
 - **LDA projection (W):** By default the script loads the pre-computed matrix `SupportFiles/W.mat` so all figures are exactly reproducible. To recompute from scratch, set `opt.computeAll = true` in `MainFlyIndividuality.m`. Minor numerical differences may appear due to random initialization in LDA.
-- **Permutation tests:** Each run of `permutationTestOneWayANOVA` uses 1,000 random permutations. Results are stable across runs (p-values should agree to ±0.01).
-- **Normalization:** Behavioral scores are z-scored within recording month to remove batch effects.
-
----
-
-## Citation
-
-If you use this code, please cite:
-
-```
-Forkosh O, et al. (2026). Life Events Reshape Individuality in Flies Without
-Losing Consistency. PLOS Biology. https://doi.org/[DOI]
-```
-
----
-
-## License
-
-Code written for this paper is released under the **MIT License** (see `LICENSE`).  
-Third-party code in `external/` retains its original licenses:
-- `violinplot/`: MIT License (Bechtold & Bastibe)
-- `ParTI/`: see `external/ParTI/` for license
-- `fdr_bh.m`: BSD License (Groppe et al.)
